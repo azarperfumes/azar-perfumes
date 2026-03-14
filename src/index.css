@@ -180,6 +180,21 @@ img {
   padding: 2rem;
 }
 
+/* Header Logo Visibility */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.desktop-logo-text {
+  display: block;
+}
+
+.mobile-logo-img {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .section-y {
     padding: 3.5rem 0 !important;
@@ -221,6 +236,15 @@ img {
   }
   .container {
     padding: 0 1rem;
+  }
+  
+  /* Header Logo Visibility */
+  .desktop-logo-text {
+    display: none !important;
+  }
+  
+  .mobile-logo-img {
+    display: block !important;
   }
 }
 
