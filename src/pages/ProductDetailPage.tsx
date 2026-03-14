@@ -174,21 +174,6 @@ const ProductDetailPage = () => {
                 {product.description}
               </p>
 
-              <div style={{ marginBottom: '3rem' }}>
-                <h3 style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontSize: '1.3rem',
-                  marginBottom: '1rem',
-                  color: themeColors.accent
-                }}>
-                  Olfactory Notes
-                </h3>
-                <ul className="mobile-left-text" style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: '0.5rem' }}><strong>Top:</strong> {product.notes.top}</li>
-                  <li style={{ marginBottom: '0.5rem' }}><strong>Heart:</strong> {product.notes.heart}</li>
-                  <li><strong>Base:</strong> {product.notes.base}</li>
-                </ul>
-              </div>
 
               <div className="actions-row" style={{
                 borderTop: `1px solid ${themeColors.text === '#fff' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}`
