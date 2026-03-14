@@ -23,7 +23,7 @@ export const products: Product[] = [
         description: 'An exceptionally fresh and vibrant fragrance. BLANC opens with bright citrus, unfolding into an elegant and sophisticated woody trail. The signature of a modern gentleman.',
         volume: '50ml / 1.7 fl.oz',
         category: 'Eau de Parfum',
-        price: '₹2,499',
+        price: '₹599',
         image: '/src/assets/blanc.png',
         notes: {
             top: 'Bergamot, Grapefruit, Lemon',
@@ -39,7 +39,7 @@ export const products: Product[] = [
         description: 'A mesmerizing and intense essence that captures the essence of femininity. LEYLA intertwines delicate floral bouquets with a dark, sensual oriental base.',
         volume: '50ml / 1.7 fl.oz',
         category: 'Eau de Parfum',
-        price: '₹2,799',
+        price: '₹599',
         image: '/src/assets/leyla.png',
         notes: {
             top: 'Blackcurrant, Pear, Mandarin',
@@ -55,7 +55,7 @@ export const products: Product[] = [
         description: 'A shared intimacy, expressed through scent. U&ME is a universally alluring blend of clean aquatics and warm ambers, designed to be worn and loved by anyone.',
         volume: '50ml / 1.7 fl.oz',
         category: 'Extrait de Parfum',
-        price: '₹3,199',
+        price: '₹599',
         image: '/src/assets/ume.png',
         notes: {
             top: 'Sea Salt, Sicilian Lemon, Cardamom',
