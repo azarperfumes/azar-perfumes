@@ -8,11 +8,13 @@ const ProductDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    setActiveImage(null);
+  }, [id]);
 
   const product = products.find(p => p.id === id);
 
@@ -67,19 +69,65 @@ const ProductDetailPage = () => {
             {/* Image Section */}
             <div className="animate-fade-in flex-col detail-img-pad" style={{
               display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '2rem',
               justifyContent: 'center'
             }}>
-              <img 
-                src={product.image} 
-                alt={product.name} 
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  maxHeight: '600px',
-                  objectFit: 'contain',
-                  filter: product.theme !== 'light' ? 'drop-shadow(0 20px 30px rgba(0,0,0,0.5))' : 'drop-shadow(0 20px 30px rgba(0,0,0,0.1))'
-                }}
-              />
+              <div style={{
+                height: 'clamp(350px, 50vh, 500px)',
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <img 
+                  src={activeImage || product.image} 
+                  alt={product.name} 
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                    filter: product.theme !== 'light' ? 'drop-shadow(0 20px 30px rgba(0,0,0,0.5))' : 'drop-shadow(0 20px 30px rgba(0,0,0,0.1))',
+                    transition: 'opacity 0.3s ease'
+                  }}
+                />
+              </div>
+              
+              {/* Thumbnails */}
+              <div style={{
+                display: 'flex',
+                gap: '1rem',
+                justifyContent: 'center',
+                marginTop: '1rem'
+              }}>
+                <button
+                  onClick={() => setActiveImage(product.image)}
+                  style={{
+                    border: (activeImage === null || activeImage === product.image) ? `2px solid ${themeColors.accent}` : '2px solid transparent',
+                    background: 'none',
+                    padding: '2px',
+                    cursor: 'pointer',
+                    borderRadius: '8px',
+                    transition: 'border-color 0.3s ease'
+                  }}
+                >
+                  <img src={product.image} alt={`${product.name} Main`} style={{ width: '70px', height: '70px', objectFit: 'cover', borderRadius: '4px' }} />
+                </button>
+                <button
+                  onClick={() => setActiveImage(product.secondaryImage)}
+                  style={{
+                    border: activeImage === product.secondaryImage ? `2px solid ${themeColors.accent}` : '2px solid transparent',
+                    background: 'none',
+                    padding: '2px',
+                    cursor: 'pointer',
+                    borderRadius: '8px',
+                    transition: 'border-color 0.3s ease'
+                  }}
+                >
+                  <img src={product.secondaryImage} alt={`${product.name} Detail`} style={{ width: '70px', height: '70px', objectFit: 'cover', borderRadius: '4px' }} />
+                </button>
+              </div>
             </div>
 
             {/* Details Section */}
