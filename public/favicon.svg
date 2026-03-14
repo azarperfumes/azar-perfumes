@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded elegant background -->
+  <rect width="100" height="100" rx="20" fill="#0a1128"/>
+  
+  <!-- Left thin leg -->
+  <polygon points="46,20 25,80 32,80 49,30" fill="#c5a059"/>
+  
+  <!-- Right thick leg -->
+  <polygon points="46,20 54,20 75,80 62,80 49,30" fill="#c5a059"/>
+  
+  <!-- Stylized ascending slash -->
+  <polygon points="12,68 88,40 92,46 16,74" fill="#c5a059"/>
+</svg>
