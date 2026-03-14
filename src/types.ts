@@ -1,3 +1,7 @@
+import blancImg from './assets/blanc.PNG';
+import leylaImg from './assets/leyla.PNG';
+import umeImg from './assets/ume.PNG';
+
 export interface Product {
     id: string;
     name: string;
@@ -24,7 +28,7 @@ export const products: Product[] = [
         volume: '50ml / 1.7 fl.oz',
         category: 'Eau de Parfum',
         price: '₹599',
-        image: '/src/assets/blanc.png',
+        image: blancImg,
         notes: {
             top: 'Bergamot, Grapefruit, Lemon',
             heart: 'Pink Pepper, Nutmeg, Jasmine',
@@ -40,7 +44,7 @@ export const products: Product[] = [
         volume: '50ml / 1.7 fl.oz',
         category: 'Eau de Parfum',
         price: '₹599',
-        image: '/src/assets/leyla.png',
+        image: leylaImg,
         notes: {
             top: 'Blackcurrant, Pear, Mandarin',
             heart: 'Rose, Orange Blossom, Iris',
@@ -56,7 +60,7 @@ export const products: Product[] = [
         volume: '50ml / 1.7 fl.oz',
         category: 'Extrait de Parfum',
         price: '₹599',
-        image: '/src/assets/ume.png',
+        image: umeImg,
         notes: {
             top: 'Sea Salt, Sicilian Lemon, Cardamom',
             heart: 'Sage, Violet Leaf, Geranium',

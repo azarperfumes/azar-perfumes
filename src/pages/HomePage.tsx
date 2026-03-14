@@ -1,6 +1,7 @@
 
 import ProductCard from '../components/ProductCard';
 import { products } from '../types';
+import heroImg from '../assets/hero.PNG';
 
 const HomePage = () => {
   return (
@@ -23,7 +24,7 @@ const HomePage = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: `url('/src/assets/hero.png')`,
+          backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.8
