@@ -13,7 +13,7 @@ const Header = () => {
       zIndex: 100,
       backdropFilter: 'blur(10px)',
       WebkitBackdropFilter: 'blur(10px)',
-      background: 'rgba(253, 251, 247, 1)'
+      background: 'rgba(255, 255, 255, 1)'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Link to="/" style={{ textDecoration: 'none' }}>
